@@ -23,6 +23,8 @@ const fakeRandom = ({ rows, cols, stringSet }) => {
   return { count, backyard };
 }
 
+let cnt = 0;
+
 describe('Count cats!', () => {
   // Presence requirement
 
@@ -42,6 +44,12 @@ describe('Count cats!', () => {
         ['^^', '..', 'ss'],
         ['AA', 'dd', 'Oo'],
       ]), 1);
+      cnt = countCats([
+        ['##', 'dd', '00'],
+        ['^^', '..', 'ss'],
+        ['AA', 'dd', 'Oo'],
+      ]);
+      cnt = 5;
     });
 
     it.optional('level 0.2', () => {
@@ -109,5 +117,3 @@ describe('Count cats!', () => {
     });
   });
 });
-
-
